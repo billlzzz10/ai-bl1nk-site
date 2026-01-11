@@ -12,6 +12,7 @@ import { MistralProvider } from './mistral';
 import { BedrockProvider } from './bedrock';
 import { XAIProvider, ZAIProvider, OpencodeProvider } from './generic';
 import { LocalProvider } from './local';
+import { GitHubProvider } from './github';
 
 export class ProviderFactory {
     private providers: Map<ProviderName, IProvider> = new Map();
@@ -56,6 +57,9 @@ export class ProviderFactory {
             case 'opencode':
                 provider = new OpencodeProvider(this.env, config?.endpoint);
                 break;
+            case 'github':
+                provider = new GitHubProvider(this.env);
+                break;
             case 'local':
                 provider = new LocalProvider(this.env, config?.endpoint);
                 break;
@@ -81,6 +85,7 @@ export class ProviderFactory {
             xai: 'XAI_KEY',
             zai: 'ZAI_KEY',
             opencode: 'OPENCODE_KEY',
+            github: 'GITHUB_TOKEN',
             local: 'OPENAI_KEY', // Local doesn't need a key, always available
         };
 
@@ -103,6 +108,7 @@ export class ProviderFactory {
             'xai',
             'zai',
             'opencode',
+            'github',
             'local',
         ];
 

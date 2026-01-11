@@ -4,7 +4,7 @@
 
 export type ModelMode = 'chat' | 'vision' | 'tool' | 'embed' | 'rerank';
 export type ModelTier = 'cheap' | 'standard' | 'premium';
-export type ProviderName = 'bedrock' | 'openai' | 'gemini' | 'voyage' | 'cohere' | 'mistral' | 'xai' | 'zai' | 'opencode' | 'local';
+export type ProviderName = 'bedrock' | 'openai' | 'gemini' | 'voyage' | 'cohere' | 'mistral' | 'xai' | 'zai' | 'opencode' | 'github' | 'local';
 
 /**
  * Model definition in CONFIG KV
@@ -214,6 +214,7 @@ export interface Env {
     XAI_KEY?: string;
     ZAI_KEY?: string;
     OPENCODE_KEY?: string;
+    GITHUB_TOKEN?: string;
 }
 
 /**
