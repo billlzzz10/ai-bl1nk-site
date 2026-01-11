@@ -1,0 +1,249 @@
+{
+    "rates": [
+        {
+            "provider": "openai",
+            "model": "gpt-5",
+            "input_price_per_1k": 0.00175,
+            "output_price_per_1k": 0.014,
+            "unit": "token"
+        },
+        {
+            "provider": "openai",
+            "model": "gpt-5-pro",
+            "input_price_per_1k": 0.021,
+            "output_price_per_1k": 0.168,
+            "unit": "token"
+        },
+        {
+            "provider": "openai",
+            "model": "gpt-5-mini",
+            "input_price_per_1k": 0.00025,
+            "output_price_per_1k": 0.002,
+            "unit": "token"
+        },
+        {
+            "provider": "openai",
+            "model": "gpt-4o",
+            "input_price_per_1k": 0.0025,
+            "output_price_per_1k": 0.01,
+            "unit": "token"
+        },
+        {
+            "provider": "openai",
+            "model": "gpt-4o-mini",
+            "input_price_per_1k": 0.00015,
+            "output_price_per_1k": 0.0006,
+            "unit": "token"
+        },
+        {
+            "provider": "openai",
+            "model": "gpt-4.1",
+            "input_price_per_1k": 0.003,
+            "output_price_per_1k": 0.012,
+            "unit": "token"
+        },
+        {
+            "provider": "openai",
+            "model": "gpt-4.1-mini",
+            "input_price_per_1k": 0.0008,
+            "output_price_per_1k": 0.0032,
+            "unit": "token"
+        },
+        {
+            "provider": "openai",
+            "model": "gpt-4.1-nano",
+            "input_price_per_1k": 0.0002,
+            "output_price_per_1k": 0.0008,
+            "unit": "token"
+        },
+        {
+            "provider": "openai",
+            "model": "o1-preview",
+            "input_price_per_1k": 0.015,
+            "output_price_per_1k": 0.06,
+            "unit": "token"
+        },
+        {
+            "provider": "openai",
+            "model": "o1-mini",
+            "input_price_per_1k": 0.003,
+            "output_price_per_1k": 0.012,
+            "unit": "token"
+        },
+        {
+            "provider": "openai",
+            "model": "o4-mini",
+            "input_price_per_1k": 0.004,
+            "output_price_per_1k": 0.016,
+            "unit": "token"
+        },
+        {
+            "provider": "openai",
+            "model": "gpt-realtime",
+            "input_price_per_1k": 0.004,
+            "output_price_per_1k": 0.016,
+            "unit": "token"
+        },
+        {
+            "provider": "openai",
+            "model": "gpt-realtime-mini",
+            "input_price_per_1k": 0.0006,
+            "output_price_per_1k": 0.0024,
+            "unit": "token"
+        },
+        {
+            "provider": "openai",
+            "model": "gpt-image-1.5",
+            "input_price_per_1k": 0.005,
+            "output_price_per_1k": 0.01,
+            "unit": "token"
+        },
+        {
+            "provider": "openai",
+            "model": "gpt-image-1",
+            "input_price_per_1k": 0.005,
+            "unit": "token"
+        },
+        {
+            "provider": "openai",
+            "model": "gpt-image-1-mini",
+            "input_price_per_1k": 0.002,
+            "unit": "token"
+        },
+        {
+            "provider": "openai",
+            "model": "text-embedding-3-small",
+            "input_price_per_1k": 0.00002,
+            "unit": "token"
+        },
+        {
+            "provider": "openai",
+            "model": "text-embedding-3-large",
+            "input_price_per_1k": 0.00013,
+            "unit": "token"
+        },
+        {
+            "provider": "gemini",
+            "model": "gemini-1.5-pro",
+            "input_price_per_1k": 0.00125,
+            "output_price_per_1k": 0.005,
+            "unit": "token"
+        },
+        {
+            "provider": "gemini",
+            "model": "text-embedding-004",
+            "input_price_per_1k": 0.00001,
+            "unit": "token"
+        },
+        {
+            "provider": "bedrock",
+            "model": "us.amazon.nova-pro-v1:0",
+            "input_price_per_1k": 0.0008,
+            "output_price_per_1k": 0.0032,
+            "unit": "token"
+        },
+        {
+            "provider": "bedrock",
+            "model": "us.anthropic.claude-3-5-sonnet-20241022-v2:0",
+            "input_price_per_1k": 0.003,
+            "output_price_per_1k": 0.015,
+            "unit": "token"
+        },
+        {
+            "provider": "voyage",
+            "model": "voyage-2",
+            "input_price_per_1k": 0.0001,
+            "unit": "token"
+        },
+        {
+            "provider": "voyage",
+            "model": "rerank-lite-1",
+            "request_price": 0.0002,
+            "unit": "request"
+        },
+        {
+            "provider": "cohere",
+            "model": "command-r",
+            "input_price_per_1k": 0.0005,
+            "output_price_per_1k": 0.0015,
+            "unit": "token"
+        },
+        {
+            "provider": "cohere",
+            "model": "embed-english-v3.0",
+            "input_price_per_1k": 0.0001,
+            "unit": "token"
+        },
+        {
+            "provider": "cohere",
+            "model": "rerank-english-v3.0",
+            "request_price": 0.0002,
+            "unit": "request"
+        },
+        {
+            "provider": "mistral",
+            "model": "mistral-large-latest",
+            "input_price_per_1k": 0.002,
+            "output_price_per_1k": 0.006,
+            "unit": "token"
+        },
+        {
+            "provider": "mistral",
+            "model": "mistral-embed",
+            "input_price_per_1k": 0.0001,
+            "unit": "token"
+        },
+        {
+            "provider": "xai",
+            "model": "grok-beta",
+            "input_price_per_1k": 0.005,
+            "output_price_per_1k": 0.015,
+            "unit": "token"
+        },
+        {
+            "provider": "zai",
+            "model": "zai-chat",
+            "input_price_per_1k": 0.0003,
+            "output_price_per_1k": 0.0012,
+            "unit": "token"
+        },
+        {
+            "provider": "zai",
+            "model": "zai-embed",
+            "input_price_per_1k": 0.00005,
+            "unit": "token"
+        },
+        {
+            "provider": "zai",
+            "model": "zai-rerank",
+            "request_price": 0.0001,
+            "unit": "request"
+        },
+        {
+            "provider": "opencode",
+            "model": "opencode-chat",
+            "input_price_per_1k": 0.0004,
+            "output_price_per_1k": 0.0016,
+            "unit": "token"
+        },
+        {
+            "provider": "opencode",
+            "model": "opencode-embed",
+            "input_price_per_1k": 0.00008,
+            "unit": "token"
+        },
+        {
+            "provider": "opencode",
+            "model": "opencode-rerank",
+            "request_price": 0.00015,
+            "unit": "request"
+        },
+        {
+            "provider": "local",
+            "model": "llama-3-8b",
+            "input_price_per_1k": 0,
+            "output_price_per_1k": 0,
+            "unit": "token"
+        }
+    ]
+}

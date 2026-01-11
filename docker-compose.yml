@@ -1,0 +1,82 @@
+version: '3.8'
+
+services:
+  # Example: llama.cpp server for local models
+  llama-cpp:
+    image: ghcr.io/ggerganov/llama.cpp:server
+    container_name: ai-gateway-llama
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./models:/models
+    command: >
+      --server
+      --model /models/llama-3-8b.gguf
+      --host 0.0.0.0
+      --port 8080
+      --ctx-size 4096
+      --n-gpu-layers 35
+    restart: unless-stopped
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+
+  # Example: vLLM server for faster inference
+  vllm:
+    image: vllm/vllm-openai:latest
+    container_name: ai-gateway-vllm
+    ports:
+      - "8081:8000"
+    volumes:
+      - ./models:/models
+      - ~/.cache/huggingface:/root/.cache/huggingface
+    command: >
+      --model meta-llama/Llama-3-8B-Instruct
+      --host 0.0.0.0
+      --port 8000
+      --dtype auto
+      --max-model-len 4096
+    restart: unless-stopped
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+
+  # Example: Embedding model server
+  text-embeddings:
+    image: ghcr.io/huggingface/text-embeddings-inference:latest
+    container_name: ai-gateway-embeddings
+    ports:
+      - "8082:80"
+    volumes:
+      - ./models:/models
+    command: >
+      --model-id BAAI/bge-small-en-v1.5
+      --port 80
+      --max-batch-tokens 16384
+    restart: unless-stopped
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+
+# Usage:
+# 1. Download models to ./models directory
+# 2. Start services: docker-compose up -d
+# 3. Configure in config/models.json:
+#    {
+#      "provider": "local",
+#      "model": "llama-3-8b",
+#      "endpoint": "http://localhost:8080"
+#    }
+# 4. Test: curl http://localhost:8080/health

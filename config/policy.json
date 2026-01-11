@@ -1,0 +1,22 @@
+{
+    "policies": [
+        {
+            "user": "default",
+            "daily_limit_usd": 10.0,
+            "current_spend_usd": 0,
+            "reset_at": "2026-01-12T00:00:00Z"
+        },
+        {
+            "user": "premium_user",
+            "daily_limit_usd": 100.0,
+            "current_spend_usd": 0,
+            "reset_at": "2026-01-12T00:00:00Z"
+        },
+        {
+            "project": "demo_project",
+            "daily_limit_usd": 50.0,
+            "current_spend_usd": 0,
+            "reset_at": "2026-01-12T00:00:00Z"
+        }
+    ]
+}

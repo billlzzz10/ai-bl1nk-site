@@ -1,0 +1,20 @@
+name = "ai-bl1nk-site"
+main = "worker.ts"
+compatibility_date = "2024-01-01"
+account_id = "f3f58c0fe75a56182d39e29f8b023302"
+
+# KV Namespaces
+kv_namespaces = [
+  { binding = "CONFIG", id = "3ec4295580bb49c09719fb69fe5bb951" },
+  { binding = "RATES", id = "2a16f41651d548dfb60731b30c70c296" },
+  { binding = "POLICY", id = "c81c543f59a841459b7ad7ee31b49189" }
+]
+
+# Observability
+[observability]
+enabled = true
+
+# Custom domain (configure after deployment)
+# routes = [
+#   { pattern = "ai.bl1nk.site", custom_domain = true }
+# ]

@@ -1,0 +1,231 @@
+{
+    "info": {
+        "name": "AI Gateway - bl1nk",
+        "description": "API collection for AI Gateway with multi-provider support",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Health Check",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "{{base_url}}/health",
+                    "host": [
+                        "{{base_url}}"
+                    ],
+                    "path": [
+                        "health"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "List Models",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "{{base_url}}/v1/models",
+                    "host": [
+                        "{{base_url}}"
+                    ],
+                    "path": [
+                        "v1",
+                        "models"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Get Quote - Chat",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n  \"input\": \"Explain quantum computing in simple terms\",\n  \"tier\": \"standard\",\n  \"usecase\": \"chat\",\n  \"constraints\": {\n    \"max_tokens\": 500\n  }\n}"
+                },
+                "url": {
+                    "raw": "{{base_url}}/v1/quote",
+                    "host": [
+                        "{{base_url}}"
+                    ],
+                    "path": [
+                        "v1",
+                        "quote"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Get Quote - Embedding",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n  \"input\": [\"Hello world\", \"AI is amazing\"],\n  \"tier\": \"cheap\",\n  \"usecase\": \"embed\"\n}"
+                },
+                "url": {
+                    "raw": "{{base_url}}/v1/quote",
+                    "host": [
+                        "{{base_url}}"
+                    ],
+                    "path": [
+                        "v1",
+                        "quote"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Route - Chat (Cheap Tier)",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n  \"input\": \"Write a haiku about coding\",\n  \"tier\": \"cheap\",\n  \"usecase\": \"chat\",\n  \"constraints\": {\n    \"max_tokens\": 100,\n    \"temperature\": 0.7\n  },\n  \"meta\": {\n    \"user\": \"demo_user\",\n    \"project\": \"demo_project\"\n  }\n}"
+                },
+                "url": {
+                    "raw": "{{base_url}}/v1/route",
+                    "host": [
+                        "{{base_url}}"
+                    ],
+                    "path": [
+                        "v1",
+                        "route"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Route - Chat (Premium Tier)",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n  \"input\": \"Explain the theory of relativity\",\n  \"tier\": \"premium\",\n  \"usecase\": \"chat\",\n  \"provider\": \"openai\",\n  \"model\": \"gpt-4o\",\n  \"constraints\": {\n    \"max_tokens\": 1000,\n    \"temperature\": 0.8\n  }\n}"
+                },
+                "url": {
+                    "raw": "{{base_url}}/v1/route",
+                    "host": [
+                        "{{base_url}}"
+                    ],
+                    "path": [
+                        "v1",
+                        "route"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Route - Vision",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n  \"input\": [\n    {\n      \"text\": \"What's in this image?\",\n      \"image\": \"data:image/jpeg;base64,/9j/4AAQSkZJRg...\"\n    }\n  ],\n  \"tier\": \"premium\",\n  \"usecase\": \"vision\",\n  \"constraints\": {\n    \"max_tokens\": 500\n  }\n}"
+                },
+                "url": {
+                    "raw": "{{base_url}}/v1/route",
+                    "host": [
+                        "{{base_url}}"
+                    ],
+                    "path": [
+                        "v1",
+                        "route"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Route - Embedding",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n  \"input\": [\n    \"Artificial intelligence is transforming industries\",\n    \"Machine learning enables computers to learn from data\",\n    \"Deep learning uses neural networks\"\n  ],\n  \"tier\": \"cheap\",\n  \"usecase\": \"embed\",\n  \"provider\": \"openai\"\n}"
+                },
+                "url": {
+                    "raw": "{{base_url}}/v1/route",
+                    "host": [
+                        "{{base_url}}"
+                    ],
+                    "path": [
+                        "v1",
+                        "route"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Route - Specific Provider",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n  \"input\": \"Tell me a joke\",\n  \"provider\": \"gemini\",\n  \"model\": \"gemini-1.5-pro\",\n  \"usecase\": \"chat\",\n  \"constraints\": {\n    \"max_tokens\": 200\n  }\n}"
+                },
+                "url": {
+                    "raw": "{{base_url}}/v1/route",
+                    "host": [
+                        "{{base_url}}"
+                    ],
+                    "path": [
+                        "v1",
+                        "route"
+                    ]
+                }
+            }
+        }
+    ],
+    "variable": [
+        {
+            "key": "base_url",
+            "value": "https://ai.bl1nk.site",
+            "type": "string"
+        }
+    ]
+}

@@ -1,0 +1,478 @@
+{
+    "models": [
+        {
+            "provider": "openai",
+            "model": "gpt-5",
+            "tier": "premium",
+            "modes": [
+                "chat",
+                "vision",
+                "tool"
+            ],
+            "displayName": "GPT-5",
+            "contextWindow": 128000,
+            "maxOutputTokens": 16384
+        },
+        {
+            "provider": "openai",
+            "model": "gpt-5-pro",
+            "tier": "premium",
+            "modes": [
+                "chat",
+                "vision",
+                "tool"
+            ],
+            "displayName": "GPT-5 Pro",
+            "contextWindow": 128000,
+            "maxOutputTokens": 32768
+        },
+        {
+            "provider": "openai",
+            "model": "gpt-5-mini",
+            "tier": "standard",
+            "modes": [
+                "chat",
+                "vision",
+                "tool"
+            ],
+            "displayName": "GPT-5 Mini",
+            "contextWindow": 128000,
+            "maxOutputTokens": 8192
+        },
+        {
+            "provider": "openai",
+            "model": "gpt-4o",
+            "tier": "premium",
+            "modes": [
+                "chat",
+                "vision",
+                "tool"
+            ],
+            "displayName": "GPT-4o",
+            "contextWindow": 128000,
+            "maxOutputTokens": 4096
+        },
+        {
+            "provider": "openai",
+            "model": "gpt-4o-mini",
+            "tier": "cheap",
+            "modes": [
+                "chat",
+                "vision",
+                "tool"
+            ],
+            "displayName": "GPT-4o Mini",
+            "contextWindow": 128000,
+            "maxOutputTokens": 16384
+        },
+        {
+            "provider": "openai",
+            "model": "gpt-4.1",
+            "tier": "premium",
+            "modes": [
+                "chat",
+                "vision",
+                "tool"
+            ],
+            "displayName": "GPT-4.1",
+            "contextWindow": 128000,
+            "maxOutputTokens": 16384
+        },
+        {
+            "provider": "openai",
+            "model": "gpt-4.1-mini",
+            "tier": "standard",
+            "modes": [
+                "chat",
+                "vision",
+                "tool"
+            ],
+            "displayName": "GPT-4.1 Mini",
+            "contextWindow": 128000,
+            "maxOutputTokens": 16384
+        },
+        {
+            "provider": "openai",
+            "model": "gpt-4.1-nano",
+            "tier": "cheap",
+            "modes": [
+                "chat",
+                "tool"
+            ],
+            "displayName": "GPT-4.1 Nano",
+            "contextWindow": 128000,
+            "maxOutputTokens": 8192
+        },
+        {
+            "provider": "openai",
+            "model": "o1-preview",
+            "tier": "premium",
+            "modes": [
+                "chat",
+                "tool"
+            ],
+            "displayName": "GPT-o1 Preview",
+            "contextWindow": 128000,
+            "maxOutputTokens": 32768
+        },
+        {
+            "provider": "openai",
+            "model": "o1-mini",
+            "tier": "standard",
+            "modes": [
+                "chat",
+                "tool"
+            ],
+            "displayName": "GPT-o1 Mini",
+            "contextWindow": 128000,
+            "maxOutputTokens": 65536
+        },
+        {
+            "provider": "openai",
+            "model": "o4-mini",
+            "tier": "standard",
+            "modes": [
+                "chat",
+                "tool"
+            ],
+            "displayName": "GPT-o4 Mini",
+            "contextWindow": 128000,
+            "maxOutputTokens": 65536
+        },
+        {
+            "provider": "openai",
+            "model": "gpt-realtime",
+            "tier": "premium",
+            "modes": [
+                "chat",
+                "vision"
+            ],
+            "displayName": "GPT Realtime",
+            "contextWindow": 128000,
+            "maxOutputTokens": 4096
+        },
+        {
+            "provider": "openai",
+            "model": "gpt-realtime-mini",
+            "tier": "standard",
+            "modes": [
+                "chat",
+                "vision"
+            ],
+            "displayName": "GPT Realtime Mini",
+            "contextWindow": 128000,
+            "maxOutputTokens": 4096
+        },
+        {
+            "provider": "openai",
+            "model": "gpt-image-1.5",
+            "tier": "premium",
+            "modes": [
+                "vision",
+                "tool"
+            ],
+            "displayName": "GPT Image 1.5",
+            "contextWindow": 128000,
+            "maxOutputTokens": 4096
+        },
+        {
+            "provider": "openai",
+            "model": "gpt-image-1",
+            "tier": "premium",
+            "modes": [
+                "vision"
+            ],
+            "displayName": "GPT Image 1",
+            "contextWindow": 128000,
+            "maxOutputTokens": 0
+        },
+        {
+            "provider": "openai",
+            "model": "gpt-image-1-mini",
+            "tier": "standard",
+            "modes": [
+                "vision"
+            ],
+            "displayName": "GPT Image 1 Mini",
+            "contextWindow": 128000,
+            "maxOutputTokens": 0
+        },
+        {
+            "provider": "openai",
+            "model": "text-embedding-3-small",
+            "tier": "cheap",
+            "modes": [
+                "embed"
+            ],
+            "displayName": "OpenAI Embedding Small"
+        },
+        {
+            "provider": "openai",
+            "model": "text-embedding-3-large",
+            "tier": "standard",
+            "modes": [
+                "embed"
+            ],
+            "displayName": "OpenAI Embedding Large"
+        },
+        {
+            "provider": "gemini",
+            "model": "gemini-1.5-pro",
+            "tier": "premium",
+            "modes": [
+                "chat",
+                "vision",
+                "tool"
+            ],
+            "displayName": "Gemini 1.5 Pro",
+            "contextWindow": 1000000,
+            "maxOutputTokens": 8192
+        },
+        {
+            "provider": "gemini",
+            "model": "text-embedding-004",
+            "tier": "standard",
+            "modes": [
+                "embed"
+            ],
+            "displayName": "Gemini Embedding"
+        },
+        {
+            "provider": "bedrock",
+            "model": "us.amazon.nova-pro-v1:0",
+            "tier": "premium",
+            "modes": [
+                "chat",
+                "vision",
+                "tool"
+            ],
+            "displayName": "Amazon Nova Pro",
+            "contextWindow": 300000,
+            "maxOutputTokens": 5000
+        },
+        {
+            "provider": "bedrock",
+            "model": "us.anthropic.claude-3-5-sonnet-20241022-v2:0",
+            "tier": "premium",
+            "modes": [
+                "chat",
+                "vision",
+                "tool"
+            ],
+            "displayName": "Claude 3.5 Sonnet (Bedrock)",
+            "contextWindow": 200000,
+            "maxOutputTokens": 8192
+        },
+        {
+            "provider": "voyage",
+            "model": "voyage-2",
+            "tier": "standard",
+            "modes": [
+                "embed"
+            ],
+            "displayName": "Voyage Embedding v2"
+        },
+        {
+            "provider": "voyage",
+            "model": "rerank-lite-1",
+            "tier": "standard",
+            "modes": [
+                "rerank"
+            ],
+            "displayName": "Voyage Rerank Lite"
+        },
+        {
+            "provider": "cohere",
+            "model": "command-r",
+            "tier": "standard",
+            "modes": [
+                "chat",
+                "tool"
+            ],
+            "displayName": "Command R",
+            "contextWindow": 128000,
+            "maxOutputTokens": 4096
+        },
+        {
+            "provider": "cohere",
+            "model": "embed-english-v3.0",
+            "tier": "standard",
+            "modes": [
+                "embed"
+            ],
+            "displayName": "Cohere Embedding v3"
+        },
+        {
+            "provider": "cohere",
+            "model": "rerank-english-v3.0",
+            "tier": "standard",
+            "modes": [
+                "rerank"
+            ],
+            "displayName": "Cohere Rerank v3"
+        },
+        {
+            "provider": "mistral",
+            "model": "mistral-large-latest",
+            "tier": "premium",
+            "modes": [
+                "chat",
+                "tool"
+            ],
+            "displayName": "Mistral Large",
+            "contextWindow": 128000,
+            "maxOutputTokens": 4096
+        },
+        {
+            "provider": "mistral",
+            "model": "mistral-embed",
+            "tier": "cheap",
+            "modes": [
+                "embed"
+            ],
+            "displayName": "Mistral Embedding"
+        },
+        {
+            "provider": "xai",
+            "model": "grok-beta",
+            "tier": "premium",
+            "modes": [
+                "chat",
+                "tool"
+            ],
+            "displayName": "Grok Beta",
+            "contextWindow": 131072,
+            "maxOutputTokens": 4096
+        },
+        {
+            "provider": "zai",
+            "model": "zai-chat",
+            "tier": "standard",
+            "modes": [
+                "chat",
+                "tool"
+            ],
+            "displayName": "ZAI Chat"
+        },
+        {
+            "provider": "zai",
+            "model": "zai-embed",
+            "tier": "cheap",
+            "modes": [
+                "embed"
+            ],
+            "displayName": "ZAI Embedding"
+        },
+        {
+            "provider": "zai",
+            "model": "zai-rerank",
+            "tier": "standard",
+            "modes": [
+                "rerank"
+            ],
+            "displayName": "ZAI Rerank"
+        },
+        {
+            "provider": "opencode",
+            "model": "opencode-chat",
+            "tier": "standard",
+            "modes": [
+                "chat",
+                "tool"
+            ],
+            "displayName": "Opencode Chat"
+        },
+        {
+            "provider": "opencode",
+            "model": "opencode-embed",
+            "tier": "cheap",
+            "modes": [
+                "embed"
+            ],
+            "displayName": "Opencode Embedding"
+        },
+        {
+            "provider": "opencode",
+            "model": "opencode-rerank",
+            "tier": "standard",
+            "modes": [
+                "rerank"
+            ],
+            "displayName": "Opencode Rerank"
+        },
+        {
+            "provider": "local",
+            "model": "llama-3-8b",
+            "tier": "cheap",
+            "modes": [
+                "chat"
+            ],
+            "displayName": "Llama 3 8B (Local)",
+            "contextWindow": 8192,
+            "maxOutputTokens": 2048
+        }
+    ],
+    "providers": {
+        "openai": {
+            "name": "openai",
+            "timeout": 30000,
+            "fallback": {
+                "on_timeout": "gemini:gemini-1.5-pro",
+                "on_rate_limit": "bedrock:us.amazon.nova-pro-v1:0"
+            }
+        },
+        "gemini": {
+            "name": "gemini",
+            "timeout": 30000,
+            "fallback": {
+                "on_timeout": "openai:gpt-4o",
+                "on_rate_limit": "bedrock:us.amazon.nova-pro-v1:0"
+            }
+        },
+        "bedrock": {
+            "name": "bedrock",
+            "timeout": 45000
+        },
+        "voyage": {
+            "name": "voyage",
+            "timeout": 20000
+        },
+        "cohere": {
+            "name": "cohere",
+            "timeout": 30000
+        },
+        "mistral": {
+            "name": "mistral",
+            "timeout": 30000
+        },
+        "xai": {
+            "name": "xai",
+            "timeout": 30000
+        },
+        "zai": {
+            "name": "zai",
+            "endpoint": "https://api.zai.com/v1",
+            "timeout": 30000
+        },
+        "opencode": {
+            "name": "opencode",
+            "endpoint": "https://api.opencode.com/v1",
+            "timeout": 30000
+        },
+        "local": {
+            "name": "local",
+            "endpoint": "http://localhost:8080",
+            "healthCheckEndpoint": "http://localhost:8080/health",
+            "timeout": 60000
+        }
+    },
+    "guardrails": {
+        "cheap_max_tokens": 2048,
+        "premium_min_usecase": [
+            "vision",
+            "tool",
+            "heavy"
+        ],
+        "enforce_budget": true
+    }
+}
