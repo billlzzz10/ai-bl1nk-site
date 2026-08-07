@@ -127,10 +127,8 @@ export function createErrorResponse(error: unknown): Response {
         });
     }
 
-    // Unknown error
-    const internalError = new InternalError(
-        error instanceof Error ? error.message : 'Unknown error'
-    );
+    // Unknown error (hide details from client)
+    const internalError = new InternalError();
     return new Response(JSON.stringify(internalError.toJSON()), {
         status: 500,
         headers: { 'Content-Type': 'application/json' },
